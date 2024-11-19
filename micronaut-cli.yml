@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.example
+testFramework: junit
+sourceLanguage: kotlin
+buildTool: gradle
+features: [app-name, gradle, http-client-test, junit, kotlin, kotlin-application, ksp, logback, management, micrometer, micrometer-datadog, micrometer-observation, micrometer-observation-http, micronaut-aot, micronaut-build, micronaut-http-validation, netty-server, properties, readme, security, security-annotations, serialization-jackson, shade, static-resources]
