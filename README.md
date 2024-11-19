@@ -10,7 +10,8 @@ Seems that on the @Context initialization, also disabled beans are used for inst
 
 Trace:
 
-> io.micronaut.context.exceptions.BeanInstantiationException: Bean definition [com.example.Controller] could not be loaded: Error instantiating bean of type  [io.micronaut.http.client.interceptor.HttpClientIntroductionAdvice]
+```
+ io.micronaut.context.exceptions.BeanInstantiationException: Bean definition [com.example.Controller] could not be loaded: Error instantiating bean of type  [io.micronaut.http.client.interceptor.HttpClientIntroductionAdvice]
 
 Message: Error processing bean [Definition: io.micronaut.configuration.metrics.binder.web.ClientMetricsFilter] method definition [void onRequest(HttpRequest<Object B> request)]: Bean [class io.micronaut.configuration.metrics.binder.web.ClientMetricsFilter] is disabled since bean property [enabled] value is not equal to [true]
 Path Taken: new Controller(TestClient client) --> new Controller([TestClient client]) --> new TestClient$Intercepted(BeanResolutionContext $beanResolutionContext,BeanContext $beanContext,Qualifier $qualifier,[List<BeanRegistration<Interceptor T> E> $interceptors],InterceptorRegistry $interceptorRegistry) --> new HttpClientIntroductionAdvice([HttpClientRegistry<HttpClient T> clientFactory],JsonMediaTypeCodec jsonMediaTypeCodec,List<ReactiveClientResultTransformer E> transformers,HttpClientBinderRegistry binderRegistry,ConversionService conversionService)
@@ -97,5 +98,5 @@ Caused by: io.micronaut.context.exceptions.BeanContextException: Error processin
 	at app//io.micronaut.context.DefaultBeanContext.resolveByBeanFactory(DefaultBeanContext.java:2334)
 	... 56 more
 Caused by: io.micronaut.context.exceptions.DisabledBeanException: Bean [class io.micronaut.configuration.metrics.binder.web.ClientMetricsFilter] is disabled since bean property [enabled] value is not equal to [true]
- 
+ ```
 
